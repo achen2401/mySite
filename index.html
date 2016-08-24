@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="Application Developer: Amy Chen, Seattle, Washington, Photography, Blog, Web Development, Length: 1 page" />
+        <meta name="robots" content="index,follow" />
+        <title>Amy's Home</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+        <!--<link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />-->
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <header class="me">
+
+           <h3>Amy's Bubble</h3>
+           <h4>This is my life</h4>
+           <h5 data-toggle="modal" data-target="#myModal">About me</h5>
+        </header>
+        <main class="container" id="main">
+
+            <!---  hide this section for now, decide to change format, may put this back later -->
+            <section class="row">
+                <figure class="col-md-12">
+                    <picture>
+                        <source srcset="images/main-800x543_large_2x.jpeg 2x, images/main-800x543_large_1x.jpeg" media="(min-width: 1100px)">
+                        <source srcset="images/main-320x213_small_2x.jpeg 2x, images/main-320x213_small_1x.jpeg" media="(max-width: 550px)">
+                        <img src="images/main-640x427_medium_1x.jpeg" alt="Greenlake">
+                    </picture>
+                    <figcaption class="text-right">Greenlake, Seattle, WA &nbsp;🔗</figcaption>
+                </figure>
+            </section>
+
+
+            <section class="row">
+                <div class="col-md-12 subtitle">Featured Work</div>
+            </section>
+
+            <section class="row">
+                 <figure class="col-md-4">
+                    <picture>
+                        <!-- when specifying pixel density e.g. 2x in srcset, that doesn't work for me -->
+                        <!-- can't figure out why, I commented out the following because they don't work when pixel density changes -->
+                        <!--
+                        <source srcset="images/photography-555x800_large_2x.jpg 2x, images/photography-555x800_large_1x.jpg" media="screen and (min-width: 1100px)">
+                        <source srcset="images/photography-444x640_medium_2x.jpg 2x, images/photography-444x640_medium_1x.jpg" media="screen and (min-width: 550px)">
+                        <img src="images/photography-555x800_large_2x.jpg" />
+                        -->
+                        <source srcset="images/photography-222x320_small_1x.jpg" media="(max-width: 550px)">
+                        <source srcset="images/photography-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                        <img src="images/photography-270x430_medium_1x.jpg" alt="Maple Leaf in Seattle">
+
+                    </picture>
+                    <figcaption>Maple Leaf, Seattle, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22574882721/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                </figure>
+                <figure class="col-md-4">
+                    <picture>
+                        <source srcset="images/animal-222x320_small_1x.jpg" media="(max-width: 550px)">
+                        <source srcset="images/animal-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                        <img src="images/animal-270x430_medium_1x.jpg" alt="Santigago in Costa Rico">
+                    </picture>
+                    <figcaption>Santiago, Costa Rico &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531769933/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                </figure>
+                <figure class="col-md-4">
+                    <picture>
+                        <source srcset="images/travel-222x320_small_1x.jpg" media="(max-width: 550px)">
+                        <source srcset="images/travel-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                        <img src="images/travel-270x430_medium_1x.jpg" alt="Patagonia in Chile">
+                    </picture>
+                    <figcaption>Patagonia, Chile &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531806083/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                </figure>
+            </section>
+
+            <section class="row"><div class="col-md-12 subtitle morelink" onclick="showMore()">More ...</div></section>
+            <section class="row more" id="more">
+                 <figure class="col-md-4">
+                    <picture>
+                        <source srcset="images/visitor-222x320_small_1x.jpg" media="(max-width: 550px)">
+                        <source srcset="images/visitor-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                        <img src="images/visitor-270x430_medium_1x.jpg" alt="My backyard in Seattle">
+                    </picture>
+                    <figcaption>My backyard in Seattle &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22577598347/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                </figure>
+                <figure class="col-md-4">
+                    <picture>
+                        <source srcset="images/pru-222x320_small_1x.jpg" media="(max-width: 550px)">
+                        <source srcset="images/pru-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                        <img src="images/pru-270x430_medium_1x.jpg" alt="Prudential Tower in Boston">
+                    </picture>
+                    <figcaption>Prudential Tower, Boston, MA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/21342900779/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                </figure>
+                <figure class="col-md-4">
+                    <picture>
+                        <source srcset="images/tundra-222x320_small_1x.jpg" media="(max-width: 550px)">
+                        <source srcset="images/tundra-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                        <img src="images/tundra-270x430_medium_1x.jpg" alt="Methow Valley in Washington">
+                    </picture>
+                    <figcaption>Methow Valley, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25139832362/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                </figure>
+
+            </section>
+
+        </main>
+        <footer>
+            <a href="http://amysbubble.tumblr.com" class="zocial-tumblr" target="_blank"><span>Tumblr</span></a>
+            <span>|</span>
+            <a href="https://www.flickr.com/photos/ames0127/" class="zocial-flickr" target="_blank"><span>Flick</span></a>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Hy Ya</h4>
+              </div>
+              <div class="modal-body">
+                I am Amy. An application developer by profession, I pursue photography as a hobby. Photography is my passion, as computer programming and traveling are.  I see life as a blank page to fill in as I go on a never-ending journey of self discovery.  I created this site as much for you as for myself.  I hope you will enjoy it and hopefully be inspired.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </body>
+
+
+
+</html>
