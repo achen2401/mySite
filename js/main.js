@@ -27,10 +27,10 @@ function showMore() {
     var vis = o.attr("vis");
 
     switch(vis) {
-
         case "show":
             o.fadeOut(500, function() {
                 olink.text("More ...");
+                //o.hide();
                 o.attr("vis", "hide");
             });
 
@@ -39,6 +39,7 @@ function showMore() {
             o.fadeIn(function() {
                 o.attr("vis", "show");
                 olink.text("Less ...");
+                //o.css("display", "flex");
                 scrollDown();
             });
 
@@ -50,6 +51,7 @@ function showMore() {
                 olink.text("Less ...");
                 scrollDown();
                 o.attr("vis", "show");
+                //o.css("display", "flex");
             });
 
     }
