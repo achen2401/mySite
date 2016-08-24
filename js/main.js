@@ -9,16 +9,25 @@ $(document).ready(function() {
 
     });
 
+    $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
+
 
 });
 
 function reSize() {
-    return Math.floor(window.innerHeight/100 * 75);
+    return Math.floor(window.innerHeight/100 * 80);
 }
 
 function scrollDown() {
     $("#main").stop().css({"scrollTop": $("#main")[0].scrollHeight}).animate({scrollTop: $("#main")[0].scrollHeight
     }, 1000);
+}
+
+
+function showHome() {
+    var h = $("#main .home");
+    h.slideToggle("slow")
+
 }
 
 function showMore() {

@@ -24,16 +24,17 @@
            <h5 data-toggle="modal" data-target="#myModal">About me</h5>
         </header>
         <main class="container" id="main">
-
             <!---  hide this section for now, may put this back later -->
-            <section class="row">
+
+            <section class="row"><div class="homelink col-md-12 text-left"><span data-toggle="tooltip" data-placement="right" title="see my homecity" onclick="showHome()">🏡</span></section>
+            <section class="row home">
                 <figure class="col-md-12">
                     <picture>
-                        <source srcset="images/main-800x543_large_2x.jpeg 2x, images/main-800x543_large_1x.jpeg" media="(min-width: 1100px)">
-                        <source srcset="images/main-320x213_small_2x.jpeg 2x, images/main-320x213_small_1x.jpeg" media="(max-width: 550px)">
-                        <img src="images/main-640x427_medium_1x.jpeg" alt="Greenlake">
+                        <source srcset="images/main-800x543_large_1x.jpeg" media="(min-width: 900px)">
+                        <source srcset="images/main-320x213_small_1x.jpeg" media="(max-width: 550px)">
+                        <img src="images/main-640x427_medium_1x.jpeg" alt="Seattle in Washington">
                     </picture>
-                    <figcaption class="text-right">Greenlake, Seattle, WA &nbsp;🔗</figcaption>
+                    <figcaption>Seattle, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25164793311/in/dateposted-public/" target="blank">🔗</a></figcaption>
                 </figure>
             </section>
 
@@ -42,7 +43,7 @@
                 <div class="col-md-12 subtitle">Featured Work</div>
             </section>
 
-            <section class="row">
+            <section class="row content">
                  <figure class="col-md-4">
                     <picture>
                         <!-- when specifying pixel density e.g. 2x in srcset, that doesn't work for me -->
@@ -54,10 +55,10 @@
                         -->
                         <source srcset="images/photography-222x320_small_1x.jpg" media="(max-width: 550px)">
                         <source srcset="images/photography-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/photography-270x430_medium_1x.jpg" alt="Maple Leaf in Seattle">
+                        <img src="images/photography-270x430_medium_1x.jpg" alt="Playground">
 
                     </picture>
-                    <figcaption>Maple Leaf, Seattle, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22574882721/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                    <figcaption>Playground &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22574882721/in/dateposted-public/" target="blank">🔗</a></figcaption>
                 </figure>
                 <figure class="col-md-4">
                     <picture>
@@ -78,14 +79,14 @@
             </section>
 
             <section class="row"><div class="col-md-12 subtitle morelink" onclick="showMore()">More ...</div></section>
-            <section class="row more" id="more">
+            <section class="row content more" id="more">
                  <figure class="col-md-4">
                     <picture>
                         <source srcset="images/visitor-222x320_small_1x.jpg" media="(max-width: 550px)">
                         <source srcset="images/visitor-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/visitor-270x430_medium_1x.jpg" alt="My backyard in Seattle">
+                        <img src="images/visitor-270x430_medium_1x.jpg" alt="My backyard">
                     </picture>
-                    <figcaption>My backyard in Seattle &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22577598347/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                    <figcaption>My backyard &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22577598347/in/dateposted-public/" target="blank">🔗</a></figcaption>
                 </figure>
                 <figure class="col-md-4">
                     <picture>
