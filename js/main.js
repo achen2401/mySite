@@ -10,9 +10,13 @@ $(document).ready(function() {
     });
 
     $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
+    $("#main img").click(function(){
+        zoomImage(this);
+    })
 
 
 });
+
 
 function reSize() {
     return Math.floor(window.innerHeight/100 * 80);
@@ -30,9 +34,31 @@ function showHome() {
 
 }
 
+function zoomImage(obj) {
+      var s = $(obj).attr("state");
+      switch(s) {
+
+        case "zoomedOut":
+            $(obj).css({"transform" : "scale(1.3)"});
+            $(obj).attr("state", "zoomedIn");
+            $(obj).addClass("absolute");
+            setTimeout('$("#overLay").show();', 0);
+            break;
+        case "zoomedIn":
+        default:
+            $(obj).css({"transform": "scale(1)"});
+            $(obj).attr("state", "zoomedOut");
+            $(obj).removeClass("absolute");
+            setTimeout('$("#overLay").hide();', 0);
+            break;
+
+      }
+
+}
+
 function showMore() {
     var o = $("#more");
-    var olink = $(".morelink");
+    var olink = $("#moreLink");
     var vis = o.attr("vis");
 
     switch(vis) {
@@ -56,7 +82,7 @@ function showMore() {
             break;
 
         default:
-            o.fadeIn(300, function() {
+            o.fadeIn(500, function() {
                 olink.text("Less ...");
                 scrollDown();
                 o.attr("vis", "show");
