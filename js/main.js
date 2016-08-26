@@ -12,14 +12,16 @@ $(document).ready(function() {
     $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
     $("#main img").click(function(){
         zoomImage(this);
-    })
+    });
+
+    $("#main img").addClass("img-responsive");
 
 
 });
 
 
 function reSize() {
-    return Math.floor(window.innerHeight/100 * 80);
+    return Math.floor(window.innerHeight/100 * 85);
 }
 
 function scrollDown() {
@@ -39,7 +41,7 @@ function zoomImage(obj) {
       switch(s) {
 
         case "zoomedOut":
-            $(obj).css({"transform" : "scale(1.3)"});
+            $(obj).css({"transform" : "scale(1.2)"});
             $(obj).attr("state", "zoomedIn");
             $(obj).addClass("absolute");
             setTimeout('$("#overLay").show();', 0);

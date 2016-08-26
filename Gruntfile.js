@@ -75,16 +75,16 @@ module.exports = function(grunt) {
               quality: 70
             },
             {
-              width: 270,
-              height: 430,
+              width: 444,
+              height: 640,
               suffix: '_medium_1x',
-              quality: 70
+              quality: 80
             },
             {
-              width: 290,
-              height: 450,
+              width: 444,
+              height: 640,
               suffix: '_medium_2x',
-              quality: 80
+              quality: 90
             },
             {
               width: 222,
@@ -99,15 +99,15 @@ module.exports = function(grunt) {
               quality: 70
             },
             {
-              width: 167,
-              height: 240,
-              suffix: '_xsmall_1x',
+              width: 270,
+              height: 430,
+              suffix: '_medium_1x',
               quality: 50
             },
             {
-              width: 167,
-              height: 240,
-              suffix: '_xsmall_2x',
+              width: 270,
+              height: 430,
+              suffix: '_medium_2x',
               quality: 70
             }
           ]
