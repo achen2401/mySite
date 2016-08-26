@@ -118,6 +118,7 @@ header h5 {
     max-width: 100%;
     min-width: 360px;
     margin-top: 5.5em;
+    margin-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
     height: 500px;
@@ -239,8 +240,14 @@ footer span:hover, footer a:hover {
 
 }
 
-#main .more {
+#more {
     display: none;
+}
+
+#more::after{
+    content: "placeholder";
+    visibility: hidden;
+    margin-bottom: 1em;
 }
 
 
@@ -332,7 +339,7 @@ footer span:hover, footer a:hover {
     #main figure {
         max-width: 100%;
         width: 100%;
-        margin: 1.5% auto;
+        margin: 2% auto;
     }
 
     /*
