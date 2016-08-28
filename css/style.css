@@ -319,7 +319,7 @@ footer span:hover, footer a:hover {
     }
 
     header h3, header h4, header h5 {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
 
@@ -333,7 +333,7 @@ footer span:hover, footer a:hover {
 
     section.row {
         width: 100%;
-        margin: auto -1em;
+        margin: auto;
     }
 
     #main figure {
