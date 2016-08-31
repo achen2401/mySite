@@ -1,16 +1,13 @@
 var mainApp = angular.module("mainApp", []);
 mainApp.controller('amyController', function ($scope, $http) {
-
   $http.get("./data/data.json").success(function (response) {
       $scope.data = response;
   });
 
 });
 
-
 function reSize(p) {
-
-    return Math.floor(window.innerHeight/100 * (p?p:85));
+  return Math.floor(window.innerHeight/100 * (p?p:85));
 }
 
 function scrollDown() {
@@ -22,13 +19,11 @@ function scrollDown() {
 function showHome() {
     var h = $("#main .home");
     h.slideToggle("slow")
-
 }
 
 function zoomImage(obj) {
       var s = $(obj).attr("state");
       switch(s) {
-
         case "zoomedOut":
             $(obj).css({"transform" : "scale(1.2)"});
             $(obj).attr("state", "zoomedIn");
@@ -42,7 +37,6 @@ function zoomImage(obj) {
             $(obj).removeClass("absolute");
             setTimeout('$("#overLay").hide();', 0);
             break;
-
       }
 
 }
@@ -65,7 +59,6 @@ function showMore() {
             o.fadeIn(function() {
                 o.attr("vis", "show");
                 olink.text("Less ...");
-                //o.css("display", "flex");
                 scrollDown();
             });
             break;
@@ -75,25 +68,18 @@ function showMore() {
                 olink.text("Less ...");
                 scrollDown();
                 o.attr("vis", "show");
-                //o.css("display", "flex");
             });
 
     }
-
-
 }
 
-
 $(document).ready(function() {
-
-    //alert(reSize());
     $("main").height(reSize() + "px");
     $(".tab-content").height(reSize(75) + "px");
 
     $(window).resize(function() {
         $("main").css("height", reSize() + "px");
         $(".tab-content").css("height", reSize(75) + "px");
-
     });
 
     $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
@@ -102,8 +88,6 @@ $(document).ready(function() {
     });
 
     $("#main img").addClass("img-responsive");
-
-
 });
 
 

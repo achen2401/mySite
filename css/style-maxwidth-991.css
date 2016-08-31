@@ -1,0 +1,11 @@
+#main section.content {
+display: -webkit-flex; /* Safari */
+display: flex;
+flex-wrap: wrap;
+}
+#main figure {
+width: 48%;
+width: calc((100% / 2) - 2%);
+margin: 1%;
+}
+.morelink { display: none;}

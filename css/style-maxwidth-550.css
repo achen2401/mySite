@@ -1,0 +1,31 @@
+#main {
+overflow-x: hidden;
+}
+
+header h3, header h4, header h5 {
+font-size: 0.7em;
+}
+
+
+footer {
+text-align: center;
+}
+
+.morelink {
+display: none;
+}
+
+section.row {
+width: 100%;
+margin: auto;
+}
+
+#main figure {
+max-width: 100%;
+width: 100%;
+margin: 2% auto;
+}
+
+#home {
+padding: 1em 2em;
+}
