@@ -1,0 +1,153 @@
+{
+    "contacts": {
+        "email": "achen2401@gmail.com",
+        "tumblr": "http://amysbubble.tumblr.com",
+        "flickr": "https://www.flickr.com/photos/ames0127/"
+    },
+    "images" : [
+        {
+            "src" : "images/main-640x427_medium_1x.jpeg",
+            "alt" : "Seattle in Washington",
+            "source": [
+                {
+                    "srcset": "images/main-800x543_large_1x.jpeg",
+                    "media" : "(min-width: 900px)"
+                },
+
+                {
+                    "srcset": "images/main-320x213_small_1x.jpeg",
+                    "media" : "(max-width: 550px)"
+                }
+
+            ],
+            "figcaption" : "Seattle, WA",
+            "link": "https://www.flickr.com/photos/ames0127/25164793311/in/dateposted-public/",
+            "section": "mainRow"
+
+        },
+        {
+            "src" : "images/photography-270x430_medium_1x.jpg",
+            "alt" : "Playground",
+            "source": [
+                {
+                    "srcset": "images/photography-222x320_small_1x.jpg",
+                    "media" : "(max-width: 550px)"
+                },
+
+                {
+                    "srcset": "images/photography-444x640_medium_1x.jpg",
+                    "media" : "(min-width: 1500px)"
+                }
+
+            ],
+            "figcaption" : "Playground",
+            "link": "https://www.flickr.com/photos/ames0127/22574882721/in/dateposted-public/",
+            "section": "firstRow"
+
+        },
+        {
+            "src" : "images/animal-270x430_medium_1x.jpg",
+            "alt" : "Santigago in Chile",
+            "source": [
+                {
+                    "srcset": "images/animal-222x320_small_1x.jpg",
+                    "media" : "(max-width: 550px)"
+                },
+
+                {
+                    "srcset": "images/animal-444x640_medium_1x.jpg",
+                    "media" : "(min-width: 1500px)"
+                }
+
+            ],
+            "figcaption" : "Santigago, Chile",
+            "link": "https://www.flickr.com/photos/ames0127/23531769933/in/dateposted-public/",
+            "section": "firstRow"
+
+        },
+        {
+            "src" : "images/travel-270x430_medium_1x.jpg",
+            "alt" : "Patagonia in Chile",
+            "source": [
+                {
+                    "srcset": "images/travel-222x320_small_1x.jpg",
+                    "media" : "(max-width: 550px)"
+                },
+
+                {
+                    "srcset": "images/travel-444x640_medium_1x.jpg",
+                    "media" : "(min-width: 1500px)"
+                }
+
+            ],
+            "figcaption" : "Patagonia, Chile",
+            "link": "https://www.flickr.com/photos/ames0127/23531806083/in/dateposted-public/",
+            "section": "firstRow"
+
+        },
+        {
+            "src" : "images/visitor-270x430_medium_1x.jpg",
+            "alt" : "My backyard",
+            "source": [
+                {
+                    "srcset": "images/visitor-222x320_small_1x.jpg",
+                    "media" : "(max-width: 550px)"
+                },
+
+                {
+                    "srcset": "images/visitor-444x640_medium_1x.jpg",
+                    "media" : "(min-width: 1500px)"
+                }
+
+            ],
+            "figcaption" : "My backyard",
+            "link": "https://www.flickr.com/photos/ames0127/22577598347/in/dateposted-public/",
+            "section": "secondRow"
+
+        },
+        {
+            "src" : "images/pru-270x430_medium_1x.jpg",
+            "alt" : "Prudential Tower in Bostn",
+            "source": [
+                {
+                    "srcset": "images/pru-222x320_small_1x.jpg",
+                    "media" : "(max-width: 550px)"
+                },
+
+                {
+                    "srcset": "images/pru-444x640_medium_1x.jpg",
+                    "media" : "(min-width: 1500px)"
+                }
+
+            ],
+            "figcaption" : "Prudential Tower, Boston",
+            "link": "https://www.flickr.com/photos/ames0127/21342900779/in/dateposted-public/",
+            "section": "secondRow"
+
+        },
+        {
+            "src" : "images/tundra-270x430_medium_1x.jpg",
+            "alt" : "Prudential Tower in Bostn",
+            "source": [
+                {
+                    "srcset": "images/tundra-222x320_small_1x.jpg",
+                    "media" : "(max-width: 550px)"
+                },
+
+                {
+                    "srcset": "images/tundra-444x640_medium_1x.jpg",
+                    "media" : "(min-width: 1500px)"
+                }
+
+            ],
+            "figcaption" : "Prudential Tower, Boston",
+            "link": "https://www.flickr.com/photos/ames0127/25139832362/in/dateposted-public/",
+            "section": "secondRow"
+
+        }
+
+    ],
+    "modalContent" : "I am Amy from the great Pacific Northwest. An web application developer by profession, I pursue photography as a hobby. Photography is my passion, as computer programming and traveling are. I created and designed this site as much for you as for myself.  I hope you will enjoy it and thank you very much for visiting."
+
+
+}

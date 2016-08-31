@@ -13,11 +13,13 @@
         <link rel="stylesheet" href="css/zsocial.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
-        <script src="js/jquery.min.js"></script>
+        <!--<script src="js/jquery.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script language="javascript" src="js/angular.min.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <body>
+    <body ng-app="mainApp" ng-controller="amyController">
         <section id="overLay"><br/></section>
         <header class="me">
 
@@ -43,15 +45,16 @@
                     <div>
                         <img class="home-image-1" src="images/work-222x320_small_2x.jpg" alt="Black and White photography" />
                         Life happens.  And, it did.  An emotional roller coast at that.<br/>
-                        My mom was diagnosed with cancer. I felt like I was being hit by a train.  The center of my universe was in pain.  It was beyond imaginable. Needless to say, I was utterly devastated.<br/>
-                        Then, I lost something - something important.  I was not prepared to deal with the aftermath.  So I sunk into a rut. In not so many words, I was simply lost. <br/>
-                        In the depth of self-examination and self-doubt, I turn to photography.  Perhaps to find myself.  Perhaps to live vicariously through my lens. Deep down, I think I am just happy doing it.  They say to make memories. And I am when I take photos. The thing I love about photos is that the captured moments last - unlike the ephemeral things in life that you hope can stay everlasting. <br/>
+                        My mom was diagnosed with cancer. I felt like I was being hit by a train. The thought of losing her - the center of my universe - was clearly not acceptable.  I just couldn't bring myself to imagine it. Needless to say, I was utterly devastated.<br/>
+                        The tribulations of seeing her in pain and going through painful rounds of treatments took a toll on all of us and, in the process, changed me.  I no longer believe that I am invincible.<br/>
+                        Then, I lost something - something important.  I was not prepared to deal with the aftermath.  So I sunk into a rut.  I did not know what to do with myself.  In not so many words, I was simply lost. <br/>
+                        In the midst of self-reflection, I turn to photography.  Perhaps to find myself.  Perhaps to live vicariously through my lens. Deep down, I think I am just ecstatic doing it.  They say to make memories.  And I am when I take photos.  The thing I love about photos is that the captured moments last - unlike the ephemeral things in life that you hope can stay everlasting. <br/>
                     </div>
                     <br class="clearfix"/>
                     <div>
                         <img class="home-image-2" src="images/leaf.jpg" alt="Leaf in the park" />
-                        And so I continue.  Bringing my camera with me wherever I go. Whenever I can. Just so I can take photos. Before long, I start to see things.  I notice things.  I allow myself to take everything in. Seeing the extraordinary from the ordinary. Live in the moment as it has taught me.  There are numerous things that just deserve savoring. Truly. Be it countries I have visited.  Different people I have met. Cultures that I have encountered. Everything that surrounds me. There is an unspoken magic in them. It shines as brightly as the stars in the sky.<br/> It takes a pro to derive meanings from life.  Admittedly, I am still an amateur with regards to that. I learn as I go. It is a journey that started long ago. I find that I am never at the destination. At the end, the answers that I search for may stay elusive. But at least, I can say that I have tried.<br/>
-                        My photography captures what I see.  I hope that, by perusing through them, you will also come to feel what I feel. This is a world I created not just for myself. I want to share it with you.
+                        And so I trudge on.  Bringing my camera with me wherever I go.  Whenever I can.  Just so I can take photos.  Before long, I start to see things.  I notice things.  I allow myself to take everything in.  Seeing the extraordinary from the ordinary.  Live in the moment as it has taught me.  There are numerous things that just deserve savoring.  Truly.  Be it countries I have visited.  Different people I have met.  Cultures that I have encountered.  Everything that surrounds me.  There is an unspoken magic in them.  As magical as the wonderland that lives in people's dreams - the territory that awaits explorations.<br/>It takes a pro to derive meanings from life.  Admittedly, I am still an amateur with regards to that.  I learn as I go.  It is a journey that started long ago.  I find that I am never at the destination.  At the end, the answers that I search for may stay elusive. But at least, I can say that I have experienced as much as I possibly could.<br/>
+                        My photography captures what I see.  I hope that, by perusing through them, you will also come to feel what I feel.  This is a world I created not just for myself. I want to share it with you.
                         <!--<img class="home-image-3" src="images/lantern.jpg" alt="Hope Lantern" />-->
                     </div>
                 </div>
@@ -60,13 +63,12 @@
 
                     <!---  hide this section for now, activated by the home link -->
                     <section class="row home">
-                        <figure class="col-md-12">
+                        <figure class="col-md-12" ng-repeat="item in images | filter: 'mainRow'">
                             <picture>
-                                <source srcset="images/main-800x543_large_1x.jpeg" media="(min-width: 900px)">
-                                <source srcset="images/main-320x213_small_1x.jpeg" media="(max-width: 550px)">
-                                <img src="images/main-640x427_medium_1x.jpeg" alt="Seattle in Washington">
+                                <source ng-repeat="source in item.source" srcset="{{source.srcset}}" media="{{source.media}}"/>
+                                <img ng-src="{{item.src}}" alt="{{item.alt}}">
                             </picture>
-                            <figcaption>Seattle, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25164793311/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                            <figcaption>{{item.figcaption}} &nbsp;&nbsp;<a href="{{item.link}}" target="blank">🔗</a></figcaption>
                         </figure>
                     </section>
 
@@ -75,74 +77,32 @@
                     </section>
 
                     <section class="row content">
-                         <figure class="col-md-4">
-                            <picture>
-                                <!-- when specifying pixel density e.g. 2x in srcset, that doesn't work for me -->
-                                <!-- can't figure out why, I commented out the following because they don't work when pixel density changes -->
-                                <!--
-                                <source srcset="images/photography-555x800_large_2x.jpg 2x, images/photography-555x800_large_1x.jpg" media="screen and (min-width: 1100px)">
-                                <source srcset="images/photography-444x640_medium_2x.jpg 2x, images/photography-444x640_medium_1x.jpg" media="screen and (min-width: 550px)">
-                                <img src="images/photography-555x800_large_2x.jpg" />
-                                -->
-                                <source srcset="images/photography-222x320_small_1x.jpg" media="(max-width: 550px)">
-                                <source srcset="images/photography-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                                <img src="images/photography-270x430_medium_1x.jpg" alt="Playground">
-
+                        <figure class="col-md-4" ng-repeat="item in data.images | filter: 'firstRow'">
+                           <picture>
+                                <source ng-repeat="source in item.source" srcset="{{source.srcset}}" media="{{source.media}}"/>
+                                <img ng-src="{{item.src}}" alt="{{item.alt}}">
                             </picture>
-                            <figcaption>Playground &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22574882721/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                        </figure>
-                        <figure class="col-md-4">
-                            <picture>
-                                <source srcset="images/animal-222x320_small_1x.jpg" media="(max-width: 550px)">
-                                <source srcset="images/animal-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                                <img src="images/animal-270x430_medium_1x.jpg" alt="Santigago in Costa Rico">
-                            </picture>
-                            <figcaption>Santiago, Costa Rico &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531769933/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                        </figure>
-                        <figure class="col-md-4">
-                            <picture>
-                                <source srcset="images/travel-222x320_small_1x.jpg" media="(max-width: 550px)">
-                                <source srcset="images/travel-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                                <img src="images/travel-270x430_medium_1x.jpg" alt="Patagonia in Chile">
-                            </picture>
-                            <figcaption>Patagonia, Chile &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531806083/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                            <figcaption>{{item.figcaption}} &nbsp;&nbsp;<a href="{{item.link}}" target="blank">🔗</a></figcaption>
                         </figure>
                     </section>
 
                     <section class="row"><div id="moreLink" class="col-md-12 subtitle morelink" onclick="showMore()">More ...</div></section>
 
                     <section class="row content more" id="more">
-                         <figure class="col-md-4">
-                            <picture>
-                                <source srcset="images/visitor-222x320_small_1x.jpg" media="(max-width: 550px)">
-                                <source srcset="images/visitor-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                                <img src="images/visitor-270x430_medium_1x.jpg" alt="My backyard">
+                        <figure class="col-md-4" ng-repeat="item in data.images | filter: 'secondRow'">
+                           <picture>
+                                <source ng-repeat="source in item.source" srcset="{{source.srcset}}" media="{{source.media}}"/>
+                                <img ng-src="{{item.src}}" alt="{{item.alt}}">
                             </picture>
-                            <figcaption>My backyard &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22577598347/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                        </figure>
-                        <figure class="col-md-4">
-                            <picture>
-                                <source srcset="images/pru-222x320_small_1x.jpg" media="(max-width: 550px)">
-                                <source srcset="images/pru-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                                <img src="images/pru-270x430_medium_1x.jpg" alt="Prudential Tower in Boston">
-                            </picture>
-                            <figcaption>Prudential Tower, Boston, MA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/21342900779/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                        </figure>
-                        <figure class="col-md-4">
-                            <picture>
-                                <source srcset="images/tundra-222x320_small_1x.jpg" media="(max-width: 550px)">
-                                <source srcset="images/tundra-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                                <img src="images/tundra-270x430_medium_1x.jpg" alt="Methow Valley in Washington">
-                            </picture>
-                            <figcaption>Methow Valley, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25139832362/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                            <figcaption>{{item.figcaption}} &nbsp;&nbsp;<a href="{{item.link}}" target="blank">🔗</a></figcaption>
                         </figure>
                     </section>
                 </main>
                 <footer>
-                    <a href="mailto:achen2401@gmail.com">Contact&nbsp;&nbsp;</a><span>|</span>
-                    <a href="http://amysbubble.tumblr.com" class="zocial-tumblr" target="_blank"><span>Tumblr</span></a>
+                    <a href="mailto:{{data.contacts.email}}">Contact&nbsp;&nbsp;</a><span>|</span>
+                    <a href="{{data.contacts.tumblr}}" class="zocial-tumblr" target="_blank"><span>Tumblr</span></a>
                     <span>|</span>
-                    <a href="https://www.flickr.com/photos/ames0127/" class="zocial-flickr" target="_blank"><span>Flick</span></a>
+                    <a href="{{data.contacts.flickr}}" class="zocial-flickr" target="_blank"><span>Flick</span></a>
                 </footer>
 
             </div>
@@ -159,7 +119,7 @@
               </div>
               <div class="modal-body">
                     <p>
-                    I am Amy. An application developer by profession, I pursue photography as a hobby. Photography is my passion, as computer programming and traveling are. I created and designed this site as much for you as for myself.  I hope you will enjoy it and thank you very much for visiting.
+                    {{data.modalContent}}
                     </p>
               </div>
               <div class="modal-footer">

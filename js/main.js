@@ -1,4 +1,12 @@
-var googleMap = '<div id="map"></div>';
+var mainApp = angular.module("mainApp", []);
+mainApp.controller('amyController', function ($scope, $http) {
+
+  $http.get("./data/data.json").success(function (response) {
+      $scope.data = response;
+  });
+
+});
+
 
 function reSize(p) {
 
@@ -60,8 +68,6 @@ function showMore() {
                 //o.css("display", "flex");
                 scrollDown();
             });
-
-
             break;
 
         default:
