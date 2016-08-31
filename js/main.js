@@ -1,27 +1,8 @@
+var googleMap = '<div id="map"></div>';
 
-$(document).ready(function() {
+function reSize(p) {
 
-    //alert(reSize());
-    $("main").height(reSize() + "px");
-
-    $(window).resize(function() {
-        $("main").css("height", reSize() + "px");
-
-    });
-
-    $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
-    $("#main img").click(function(){
-        zoomImage(this);
-    });
-
-    $("#main img").addClass("img-responsive");
-
-
-});
-
-
-function reSize() {
-    return Math.floor(window.innerHeight/100 * 85);
+    return Math.floor(window.innerHeight/100 * (p?p:85));
 }
 
 function scrollDown() {
@@ -95,4 +76,31 @@ function showMore() {
 
 
 }
+
+
+$(document).ready(function() {
+
+    //alert(reSize());
+    $("main").height(reSize() + "px");
+    $(".tab-content").height(reSize(75) + "px");
+
+    $(window).resize(function() {
+        $("main").css("height", reSize() + "px");
+        $(".tab-content").css("height", reSize(75) + "px");
+
+    });
+
+    $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
+    $("#main img").click(function(){
+        zoomImage(this);
+    });
+
+    $("#main img").addClass("img-responsive");
+
+
+});
+
+
+
+
 

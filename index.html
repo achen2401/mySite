@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="Application Developer: Amy Chen, Seattle, Washington, Photography, Blog, Web Development, Length: 1 page" />
+        <meta name="Description" content="Application Developer: Amy Chen, Seattle, Washington, Photography, Blog, Web Development, Application Developer, Length: 1 page" />
         <meta name="robots" content="index,follow" />
         <link rel="icon" href="./images/amy.jpg">
         <title>Amy's Home Page</title>
@@ -33,94 +33,121 @@
         </header>
         <main class="container" id="main">
 
-            <section class="row"><div class="homelink col-md-12 text-left"><span data-toggle="tooltip" data-placement="right" title="see my homecity" onclick="showHome()">🏡</span></section>
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                <li role="presentation"><a href="#photography" aria-controls="photography" role="tab" data-toggle="tab">My Photography</a></li>
+            </ul>
 
-            <!---  hide this section for now, activated by the home link -->
-            <section class="row home">
-                <figure class="col-md-12">
-                    <picture>
-                        <source srcset="images/main-800x543_large_1x.jpeg" media="(min-width: 900px)">
-                        <source srcset="images/main-320x213_small_1x.jpeg" media="(max-width: 550px)">
-                        <img src="images/main-640x427_medium_1x.jpeg" alt="Seattle in Washington">
-                    </picture>
-                    <figcaption>Seattle, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25164793311/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                </figure>
-            </section>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div>
+                        <img class="home-image-1" src="images/work-222x320_small_2x.jpg" alt="Black and White photography" />
+                        Life happens.  And, it did.  An emotional roller coast at that.<br/>
+                        My mom was diagnosed with cancer. I felt like I was being hit by a train.  The center of my universe was in pain.  It was beyond imaginable. Needless to say, I was utterly devastated.<br/>
+                        Then, I lost something - something important.  I was not prepared to deal with the aftermath.  So I sunk into a rut. In not so many words, I was simply lost. <br/>
+                        In the depth of self-examination and self-doubt, I turn to photography.  Perhaps to find myself.  Perhaps to live vicariously through my lens. Deep down, I think I am just happy doing it.  They say to make memories. And I am when I take photos. The thing I love about photos is that the captured moments last - unlike the ephemeral things in life that you hope can stay everlasting. <br/>
+                    </div>
+                    <br class="clearfix"/>
+                    <div>
+                        <img class="home-image-2" src="images/leaf.jpg" alt="Leaf in the park" />
+                        And so I continue.  Bringing my camera with me wherever I go. Whenever I can. Just so I can take photos. Before long, I start to see things.  I notice things.  I allow myself to take everything in. Seeing the extraordinary from the ordinary. Live in the moment as it has taught me.  There are numerous things that just deserve savoring. Truly. Be it countries I have visited.  Different people I have met. Cultures that I have encountered. Everything that surrounds me. There is an unspoken magic in them. It shines as brightly as the stars in the sky.<br/> It takes a pro to derive meanings from life.  Admittedly, I am still an amateur with regards to that. I learn as I go. It is a journey that started long ago. I find that I am never at the destination. At the end, the answers that I search for may stay elusive. But at least, I can say that I have tried.<br/>
+                        My photography captures what I see.  I hope that, by perusing through them, you will also come to feel what I feel. This is a world I created not just for myself. I want to share it with you.
+                        <!--<img class="home-image-3" src="images/lantern.jpg" alt="Hope Lantern" />-->
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="photography">
+                    <section class="row"><div class="homelink col-md-12 text-left"><span data-toggle="tooltip" data-placement="right" title="see my homecity" onclick="showHome()">🏡</span></section>
 
-            <section class="row">
-                <div class="col-md-12 subtitle">Featured Work</div>
-            </section>
+                    <!---  hide this section for now, activated by the home link -->
+                    <section class="row home">
+                        <figure class="col-md-12">
+                            <picture>
+                                <source srcset="images/main-800x543_large_1x.jpeg" media="(min-width: 900px)">
+                                <source srcset="images/main-320x213_small_1x.jpeg" media="(max-width: 550px)">
+                                <img src="images/main-640x427_medium_1x.jpeg" alt="Seattle in Washington">
+                            </picture>
+                            <figcaption>Seattle, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25164793311/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                        </figure>
+                    </section>
 
-            <section class="row content">
-                 <figure class="col-md-4">
-                    <picture>
-                        <!-- when specifying pixel density e.g. 2x in srcset, that doesn't work for me -->
-                        <!-- can't figure out why, I commented out the following because they don't work when pixel density changes -->
-                        <!--
-                        <source srcset="images/photography-555x800_large_2x.jpg 2x, images/photography-555x800_large_1x.jpg" media="screen and (min-width: 1100px)">
-                        <source srcset="images/photography-444x640_medium_2x.jpg 2x, images/photography-444x640_medium_1x.jpg" media="screen and (min-width: 550px)">
-                        <img src="images/photography-555x800_large_2x.jpg" />
-                        -->
-                        <source srcset="images/photography-222x320_small_1x.jpg" media="(max-width: 550px)">
-                        <source srcset="images/photography-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/photography-270x430_medium_1x.jpg" alt="Playground">
+                    <section class="row">
+                        <div class="col-md-12 subtitle">Featured Work</div>
+                    </section>
 
-                    </picture>
-                    <figcaption>Playground &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22574882721/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                </figure>
-                <figure class="col-md-4">
-                    <picture>
-                        <source srcset="images/animal-222x320_small_1x.jpg" media="(max-width: 550px)">
-                        <source srcset="images/animal-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/animal-270x430_medium_1x.jpg" alt="Santigago in Costa Rico">
-                    </picture>
-                    <figcaption>Santiago, Costa Rico &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531769933/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                </figure>
-                <figure class="col-md-4">
-                    <picture>
-                        <source srcset="images/travel-222x320_small_1x.jpg" media="(max-width: 550px)">
-                        <source srcset="images/travel-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/travel-270x430_medium_1x.jpg" alt="Patagonia in Chile">
-                    </picture>
-                    <figcaption>Patagonia, Chile &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531806083/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                </figure>
-            </section>
+                    <section class="row content">
+                         <figure class="col-md-4">
+                            <picture>
+                                <!-- when specifying pixel density e.g. 2x in srcset, that doesn't work for me -->
+                                <!-- can't figure out why, I commented out the following because they don't work when pixel density changes -->
+                                <!--
+                                <source srcset="images/photography-555x800_large_2x.jpg 2x, images/photography-555x800_large_1x.jpg" media="screen and (min-width: 1100px)">
+                                <source srcset="images/photography-444x640_medium_2x.jpg 2x, images/photography-444x640_medium_1x.jpg" media="screen and (min-width: 550px)">
+                                <img src="images/photography-555x800_large_2x.jpg" />
+                                -->
+                                <source srcset="images/photography-222x320_small_1x.jpg" media="(max-width: 550px)">
+                                <source srcset="images/photography-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                                <img src="images/photography-270x430_medium_1x.jpg" alt="Playground">
 
-            <section class="row"><div id="moreLink" class="col-md-12 subtitle morelink" onclick="showMore()">More ...</div></section>
+                            </picture>
+                            <figcaption>Playground &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22574882721/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                        </figure>
+                        <figure class="col-md-4">
+                            <picture>
+                                <source srcset="images/animal-222x320_small_1x.jpg" media="(max-width: 550px)">
+                                <source srcset="images/animal-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                                <img src="images/animal-270x430_medium_1x.jpg" alt="Santigago in Costa Rico">
+                            </picture>
+                            <figcaption>Santiago, Costa Rico &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531769933/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                        </figure>
+                        <figure class="col-md-4">
+                            <picture>
+                                <source srcset="images/travel-222x320_small_1x.jpg" media="(max-width: 550px)">
+                                <source srcset="images/travel-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                                <img src="images/travel-270x430_medium_1x.jpg" alt="Patagonia in Chile">
+                            </picture>
+                            <figcaption>Patagonia, Chile &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/23531806083/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                        </figure>
+                    </section>
 
-            <section class="row content more" id="more">
-                 <figure class="col-md-4">
-                    <picture>
-                        <source srcset="images/visitor-222x320_small_1x.jpg" media="(max-width: 550px)">
-                        <source srcset="images/visitor-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/visitor-270x430_medium_1x.jpg" alt="My backyard">
-                    </picture>
-                    <figcaption>My backyard &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22577598347/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                </figure>
-                <figure class="col-md-4">
-                    <picture>
-                        <source srcset="images/pru-222x320_small_1x.jpg" media="(max-width: 550px)">
-                        <source srcset="images/pru-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/pru-270x430_medium_1x.jpg" alt="Prudential Tower in Boston">
-                    </picture>
-                    <figcaption>Prudential Tower, Boston, MA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/21342900779/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                </figure>
-                <figure class="col-md-4">
-                    <picture>
-                        <source srcset="images/tundra-222x320_small_1x.jpg" media="(max-width: 550px)">
-                        <source srcset="images/tundra-444x640_medium_1x.jpg" media="(min-width: 1500px)">
-                        <img src="images/tundra-270x430_medium_1x.jpg" alt="Methow Valley in Washington">
-                    </picture>
-                    <figcaption>Methow Valley, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25139832362/in/dateposted-public/" target="blank">🔗</a></figcaption>
-                </figure>
-            </section>
-        </main>
-        <footer>
-            <a href="mailto:achen2401@gmail.com">Contact&nbsp;&nbsp;</a><span>|</span>
-            <a href="http://amysbubble.tumblr.com" class="zocial-tumblr" target="_blank"><span>Tumblr</span></a>
-            <span>|</span>
-            <a href="https://www.flickr.com/photos/ames0127/" class="zocial-flickr" target="_blank"><span>Flick</span></a>
-        </footer>
+                    <section class="row"><div id="moreLink" class="col-md-12 subtitle morelink" onclick="showMore()">More ...</div></section>
+
+                    <section class="row content more" id="more">
+                         <figure class="col-md-4">
+                            <picture>
+                                <source srcset="images/visitor-222x320_small_1x.jpg" media="(max-width: 550px)">
+                                <source srcset="images/visitor-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                                <img src="images/visitor-270x430_medium_1x.jpg" alt="My backyard">
+                            </picture>
+                            <figcaption>My backyard &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/22577598347/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                        </figure>
+                        <figure class="col-md-4">
+                            <picture>
+                                <source srcset="images/pru-222x320_small_1x.jpg" media="(max-width: 550px)">
+                                <source srcset="images/pru-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                                <img src="images/pru-270x430_medium_1x.jpg" alt="Prudential Tower in Boston">
+                            </picture>
+                            <figcaption>Prudential Tower, Boston, MA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/21342900779/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                        </figure>
+                        <figure class="col-md-4">
+                            <picture>
+                                <source srcset="images/tundra-222x320_small_1x.jpg" media="(max-width: 550px)">
+                                <source srcset="images/tundra-444x640_medium_1x.jpg" media="(min-width: 1500px)">
+                                <img src="images/tundra-270x430_medium_1x.jpg" alt="Methow Valley in Washington">
+                            </picture>
+                            <figcaption>Methow Valley, WA &nbsp;&nbsp;<a href="https://www.flickr.com/photos/ames0127/25139832362/in/dateposted-public/" target="blank">🔗</a></figcaption>
+                        </figure>
+                    </section>
+                </main>
+                <footer>
+                    <a href="mailto:achen2401@gmail.com">Contact&nbsp;&nbsp;</a><span>|</span>
+                    <a href="http://amysbubble.tumblr.com" class="zocial-tumblr" target="_blank"><span>Tumblr</span></a>
+                    <span>|</span>
+                    <a href="https://www.flickr.com/photos/ames0127/" class="zocial-flickr" target="_blank"><span>Flick</span></a>
+                </footer>
+
+            </div>
+        </div>
+
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -132,9 +159,7 @@
               </div>
               <div class="modal-body">
                     <p>
-                    I am Amy. An application developer by profession, I pursue photography as a hobby. Photography is my passion, as computer programming and traveling are.  I see life as a blank page to fill in as I go on a never-ending journey of self discovery.
-                    </p>
-                    <p>I created this site as much for you as for myself.  I hope you will enjoy it and hopefully be inspired.
+                    I am Amy. An application developer by profession, I pursue photography as a hobby. Photography is my passion, as computer programming and traveling are. I created and designed this site as much for you as for myself.  I hope you will enjoy it and thank you very much for visiting.
                     </p>
               </div>
               <div class="modal-footer">
