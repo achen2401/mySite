@@ -4,19 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="Application Developer: Amy Chen, Seattle, Washington, Photography, Blog, Web Development, Application Developer, Length: 1 page" />
+        <meta name="Description" content="Photographer: Amy Chen, Seattle, Washington, Photography, Blog, Web Development, Application Developer, Length: 1 page" />
         <meta name="robots" content="index,follow" />
         <link rel="icon" href="./images/amy.jpg">
-        <title>Amy's Home Page</title>
+        <title>Amy's Photography Home Page</title>
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" media="(max-width: 550px)" href="css/style-maxwidth-550.css"/>
         <link rel="stylesheet" media="(min-width: 551px) and (max-width: 991px)" href="css/style-maxwidth-991.css"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/angular.min.js"></script>
-        <script src="js/main.js"></script>
+        <style type="text/css">.no-fouc {display: none;}</style>
+        <script>document.documentElement.className = "no-fouc";</script>
     </head>
     <body ng-app="mainApp" ng-controller="amyController">
         <section id="overLay"><br/></section>
@@ -49,24 +47,24 @@
                     </div>
                     <div>
                         <img class="home-image-2" src="images/leaf.jpg" alt="Leaf in the park" />
-                        And so I trudge on.  Bringing my camera with me wherever I go.  Whenever I can.  Just so I can take photos.  Before long, I start to see things.  I notice things.  I allow myself to take everything in.  Seeing the extraordinary from the ordinary.  Live in the moment as it has taught me.  There are numerous things that just deserve savoring.  Truly.  Be it countries I have visited.  Different people I have met.  Cultures that I have encountered.  Everything that surrounds me.  There is an unspoken magic in them.  As magical as the wonderland that lives in people's dreams - the territory that awaits explorations.<br/>It takes a pro to derive meanings from life.  Admittedly, I am still an amateur with regards to that.  I learn as I go.  It is a journey that started long ago.  I find that I am never at the destination.  At the end, the answers that I search for may stay elusive. But at least, I can say that I have experienced as much as I possibly could.<br/>
+                        And so I march on.  Bringing my camera with me wherever I go.  Whenever I can.  Just so I can take photos.  Before long, I start to see things.  I notice things.  I allow myself to take everything in.  Seeing the extraordinary from the ordinary.  Live in the moment as it has taught me.  There are an abundance of things that just deserve savoring.  Truly.  Be it countries I have visited.  Different people I have met.  Cultures that I have encountered.  Everything that surrounds me.  There is an unspoken magic in them.  As magical as the wonderland that lives in people's dreams - the territory that awaits explorations.<br/>It takes a pro to derive meanings from life.  Admittedly, I am still an amateur with regards to that.  I learn as I go.  It is a journey that started long ago.  I find that I am never at the destination.  At the end, the answers that I search for may stay elusive. But at least, I can say that I have experienced as much as I possibly could.<br/>
                         My photography captures what I see.  I hope that, by perusing through them, you will also come to feel what I feel.  This is a world I created not just for myself. I want to share it with you.
                         <!--<img class="home-image-3" src="images/lantern.jpg" alt="Hope Lantern" />-->
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="photography">
-                    <section class="row"><div class="homelink col-md-12 text-left"><span data-toggle="tooltip" data-placement="right" title="see my homecity" onclick="showHome()">🏡</span></section>
+                    <!-- <section class="row"><div class="homelink col-md-12 text-left"><span data-toggle="tooltip" data-placement="right" title="see my homecity" onclick="showHome()">🏡</span></section> -->
 
                     <!---  hide this section for now, activated by the home link -->
-                    <section class="row home">
-                        <figure class="col-md-12" ng-repeat="item in images | filter: 'mainRow'">
+                   <!--  <section class="row home">
+                        <figure class="col-md-12" ng-repeat="item in data.images | filter: 'mainRow'">
                             <picture>
                                 <source ng-repeat="source in item.source" srcset="{{source.srcset}}" media="{{source.media}}"/>
                                 <img ng-src="{{item.src}}" alt="{{item.alt}}">
                             </picture>
                             <figcaption>{{item.figcaption}} &nbsp;&nbsp;<a href="{{item.link}}" target="blank">🔗</a></figcaption>
                         </figure>
-                    </section>
+                    </section> -->
 
                     <section class="row">
                         <div class="col-md-12 subtitle">Featured Work</div>
@@ -111,10 +109,15 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Hy Ya</h4>
               </div>
-              <div class="modal-body"><p>{{data.modalContent}}</p></div>
+              <div class="modal-body"><p><img src="images/portrait.jpg"/>{{data.modalContent}}</p></div>
               <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
             </div>
           </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>document.documentElement.className = "";</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

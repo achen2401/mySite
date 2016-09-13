@@ -60,7 +60,7 @@
                 }
 
             ],
-            "figcaption" : "Santigago, Chile",
+            "figcaption" : "Santiago, Chile",
             "link": "https://www.flickr.com/photos/ames0127/23531769933/in/dateposted-public/",
             "section": "firstRow"
 
@@ -127,7 +127,7 @@
         },
         {
             "src" : "images/tundra-270x430_medium_1x.jpg",
-            "alt" : "Prudential Tower in Bostn",
+            "alt" : "Methow Valley in Washington",
             "source": [
                 {
                     "srcset": "images/tundra-222x320_small_1x.jpg",
@@ -140,14 +140,14 @@
                 }
 
             ],
-            "figcaption" : "Prudential Tower, Boston",
+            "figcaption" : "Methow Valley, Washington",
             "link": "https://www.flickr.com/photos/ames0127/25139832362/in/dateposted-public/",
             "section": "secondRow"
 
         }
 
     ],
-    "modalContent" : "I am Amy from the great Pacific Northwest. A web application developer by profession, I pursue photography as a hobby. Photography is my passion, as computer programming and traveling are. I created and designed this site as much for you as for myself.  I hope you will enjoy it and thank you very much for visiting."
+    "modalContent" : "I am Amy from Seattle, a beautiful city in the Great Pacific Northwest. A web application developer by profession, I pursue photography as a hobby. Photography is my passion, as computer programming and traveling are. I decided to build this site as much for you as for myself.  I hope you will enjoy it and thank you very much for visiting."
 
 
 }

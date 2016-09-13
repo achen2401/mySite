@@ -2,6 +2,7 @@ var mainApp = angular.module("mainApp", []);
 mainApp.controller('amyController', function ($scope, $http) {
   $http.get("./data/data.json").success(function (response) {
       $scope.data = response;
+      init();
   });
 
 });
@@ -73,7 +74,7 @@ function showMore() {
     }
 }
 
-$(document).ready(function() {
+function init() {
     $("main").height(reSize() + "px");
     $(".tab-content").height(reSize(75) + "px");
 
@@ -82,13 +83,17 @@ $(document).ready(function() {
         $(".tab-content").css("height", reSize(75) + "px");
     });
 
-    $("body").tooltip({ selector: '[data-toggle="tooltip"]' });
+    //$("body").tooltip({ selector: '[data-toggle="tooltip"]' });
     $("#main img").click(function(){
         zoomImage(this);
     });
 
     $("#main img").addClass("img-responsive");
-});
+}
+
+// $(document).ready(function() {
+
+// });
 
 
 
